@@ -1,0 +1,39 @@
+{
+  "name": "poiment-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/moment-jalaali": "^0.7.4",
+    "@types/request": "^2.47.1",
+    "archiver": "^2.1.1",
+    "dotenv": "^7.0.0",
+    "fs-extra": "^7.0.1",
+    "json2xls": "^0.1.2",
+    "moment": "^2.21.0",
+    "moment-jalaali": "^0.7.4",
+    "request": "^2.88.0",
+    "serendip": "^1.1.12",
+    "serendip-business-client": "^1.0.6",
+    "serendip-mongodb-provider": "^1.0.10",
+    "serendip-utility": "^1.1.1",
+    "zarinpal-checkout": "^0.2.7"
+  },
+  "devDependencies": {
+    "@types/archiver": "^2.1.1",
+    "@types/fs-extra": "^5.0.5",
+    "@types/underscore": "^1.8.8",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-deploy-ftp": "^1.0.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-typescript": "^4.0.1",
+    "serendip-business-model": "^1.1.8",
+    "typescript": "^2.7.2",
+    "underscore": "^1.9.1"
+  }
+}
