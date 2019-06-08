@@ -12,6 +12,8 @@ class DataService {
         this.dbService = serendip_1.Server.services["DbService"];
         this.pushTokens = await this.dbService.collection("PushTokens", false);
         this.users = await this.dbService.collection("Users", false);
+        this.users = await this.dbService.collection("Host", false);
+        this.users = await this.dbService.collection("Users", false);
         if (this.clientService.data)
             for (const collectionName in this.dbService.events()) {
                 if (collectionName != "EntityChanges")

@@ -16,6 +16,10 @@ import { resolve } from "url";
 import * as request from "request";
 import { ClientService } from "./ClientService";
 import { PushTokenModel } from "../models/PushTokenModel";
+import { AppointmentInterface } from "../models/AppointmentInterface";
+import { GuestInterface } from "../models/GuestInterface";
+import { SignedAppointmentInterface } from "../models/SignedAppointmentInterface";
+import { SignedGuestInterface } from "../models/SignedGuestInterface";
 export interface PushMessageInterface {
   title: string;
   text: string;
@@ -31,6 +35,8 @@ export class DataService implements ServerServiceInterface {
   public pushTokens: DbCollectionInterface<PushTokenModel>;
 
   public users: DbCollectionInterface<UserModel>;
+  public appointments: DbCollectionInterface<SignedAppointmentInterface>;
+  public guests: DbCollectionInterface<SignedGuestInterface>;
 
   constructor(
     private dbService: DbService,
@@ -41,6 +47,15 @@ export class DataService implements ServerServiceInterface {
 
     this.pushTokens = await this.dbService.collection<PushTokenModel>(
       "PushTokens",
+      false
+    );
+
+    this.users = await this.dbService.collection<UserModel>("Users", false);
+
+    this.appointments = await this.dbService.collection("Appointments", false);
+
+    this.guests = await this.dbService.collection<SignedGuestInterface>(
+      "Guests",
       false
     );
 
