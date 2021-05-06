@@ -40,6 +40,6 @@
     "gulp-typescript": "^4.0.1",
     "serendip-business-model": "^1.1.8",
     "typescript": "^2.7.2",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
